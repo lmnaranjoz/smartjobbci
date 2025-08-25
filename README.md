@@ -109,8 +109,8 @@ DELETE /api/v1/user/{id}
 
 **Servidor:** Java, Srping Boot JPA, Gradle, JUnit 5
 
-Para acceder a Swagger, utiliza: [http://localhost:8181/swagger-ui/index.html](http://localhost:8081/swagger-ui/index.html) y
-para acceder a la base de datos, utiliza: [http://localhost:8181/h2-console/login.do](http://localhost:8081/h2-console/login.jsp), el usuario es **smartjobbci** y la contraseña es **password**.
+Para acceder a Swagger, utiliza: [http://localhost:8181/swagger-ui/index.html](http://localhost:8181/swagger-ui/index.html) y
+para acceder a la base de datos, utiliza: [http://localhost:8181/h2-console/login.do](http://localhost:8181/h2-console/login.jsp), el usuario es **smartjobbci** y la contraseña es **password**.
 
 En el paquete de recursos se encuentra el diagrama de clases.
 

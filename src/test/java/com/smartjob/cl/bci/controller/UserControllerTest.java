@@ -20,7 +20,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-class UserControllerUnitTest {
+public class UserControllerTest {
 
     @Mock
     private UserService userService;
