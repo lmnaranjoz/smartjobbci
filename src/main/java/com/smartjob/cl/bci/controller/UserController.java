@@ -62,7 +62,7 @@ public class UserController {
                                           "email": "lmnz@gmail.com",
                                           "phones": [
                                             {
-                                              "number": "(+57)301 239-84-39",
+                                              "number": "3012398439",
                                               "citycode": 23,
                                               "contrycode": 57
                                             }
@@ -121,7 +121,7 @@ public class UserController {
                                                "email": "lmnz@gmail.com",
                                                "phones": [
                                                  {
-                                                   "number": "(+57)301 239-84-39",
+                                                   "number": "3012398439",
                                                    "citycode": 23,
                                                    "contrycode": 57
                                                  }
@@ -162,7 +162,7 @@ public class UserController {
                                              "email": "lmnz@gmail.com",
                                              "phones": [
                                                {
-                                                 "number": "(+57)301 239-84-39",
+                                                 "number": "3012398439",
                                                  "citycode": 23,
                                                  "contrycode": 57
                                                }
@@ -220,7 +220,7 @@ public class UserController {
                                              "email": "lmnz58@gmail.com",
                                              "phones": [
                                                {
-                                                 "number": "(+58)301 239-84-39",
+                                                 "number": "3012398439",
                                                  "citycode": 28,
                                                  "contrycode": 58
                                                }

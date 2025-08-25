@@ -19,9 +19,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class PhoneRequestDTO implements Serializable {
 
-    @Schema(description = "mobile number", example = "(+57)301 239-84-39")
+    @Schema(description = "mobile number", example = "3012398439")
     @NotEmpty(message = "Number cannot be empty")
-    @Pattern(regexp = "^[\\d+\\-() ]+$", message = "Invalid number")
+    @Pattern(regexp = "^\\d+$", message = "Invalid number")
     @JsonProperty("number")
     private String number;
 
