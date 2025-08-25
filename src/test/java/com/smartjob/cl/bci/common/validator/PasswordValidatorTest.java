@@ -19,7 +19,6 @@ public class PasswordValidatorTest {
     @BeforeEach
     void setUp() {
         passwordValidator = new PasswordValidator();
-        // Ejemplo de regex: mínimo 8 caracteres, al menos 1 mayúscula, 1 minúscula, 1 dígito y 1 carácter especial
         String regex = "^[A-Za-z0-9_!@#$%.^&*()\\-+=]{8,}$";
         ReflectionTestUtils.setField(passwordValidator, "passwordRegex", regex);
     }

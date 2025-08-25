@@ -1,6 +1,5 @@
 package com.smartjob.cl.bci.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -58,9 +57,7 @@ public class UserEntity implements Serializable {
     @Column(name = "is_active")
     private Boolean isActive;
 
-
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    //@JsonManagedReference
     private List<PhoneEntity> phones = new ArrayList<>();
 
     @PrePersist

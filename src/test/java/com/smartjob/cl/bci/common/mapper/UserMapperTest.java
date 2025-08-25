@@ -11,8 +11,8 @@ import org.mapstruct.factory.Mappers;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserMapperTest {
 
@@ -20,7 +20,6 @@ public class UserMapperTest {
 
     @BeforeEach
     void setUp() {
-        // Obtiene la implementación generada por MapStruct
         userMapper = Mappers.getMapper(UserMapper.class);
     }
 

@@ -25,6 +25,4 @@ public interface UserMapper {
     UserModel UserEntityToUserModel(UserEntity source);
 
     List<UserModel> UserEntityListToUserModelList(List<UserEntity> source);
-
-
 }

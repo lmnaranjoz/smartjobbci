@@ -8,8 +8,11 @@ import org.mapstruct.factory.Mappers;
 
 import java.util.Arrays;
 import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class PhoneMapperTest {
 
@@ -17,7 +20,6 @@ public class PhoneMapperTest {
 
     @BeforeEach
     void setUp() {
-        // Obtiene la implementación generada por MapStruct
         phoneMapper = Mappers.getMapper(PhoneMapper.class);
     }
 

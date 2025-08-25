@@ -1,7 +1,5 @@
 package com.smartjob.cl.bci.entity;
 
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -39,11 +37,7 @@ public class PhoneEntity implements Serializable {
     @Column(name = "contrycode", nullable = false)
     private Integer contrycode;
 
-
     @ManyToOne
     @JoinColumn(name = "user_id")
-    //@JsonBackReference
     private UserEntity user;
-
-
 }
