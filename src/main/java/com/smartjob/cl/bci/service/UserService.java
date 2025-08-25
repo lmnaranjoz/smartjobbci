@@ -46,7 +46,7 @@ public class UserService {
         validateExistsEmailUser(userModel);
 
         userModel.setCreatioDate(LocalDateTime.now());
-        userModel.setUpdateDate(LocalDateTime.now());
+        userModel.setUpdateDate(LocalDateTime.of(1970, 1, 1, 0, 0));
         userModel.setLastLogin(LocalDateTime.now());
         userModel.setIsActive(Boolean.TRUE);
 

@@ -6,8 +6,6 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.time.LocalDateTime;
-import java.util.Collections;
 import java.util.List;
 
 @RestControllerAdvice
@@ -17,11 +15,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleUserEmail(EmailException ex) {
 
         ErrorResponse errorResponse = ErrorResponse.builder()
-                .status(HttpStatus.BAD_REQUEST.value())
-                .error("Error with the email")
                 .message(ex.getMessage())
-                .timestamp(LocalDateTime.now())
-                .details(Collections.emptyList())
                 .build();
 
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
@@ -31,11 +25,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleUserPassword(PasswordException ex) {
 
         ErrorResponse errorResponse = ErrorResponse.builder()
-                .status(HttpStatus.BAD_REQUEST.value())
-                .error("Bad Request")
-                .message("The password does not comply with the format:" + ex.getMessage())
-                .timestamp(LocalDateTime.now())
-                .details(Collections.emptyList())
+                .message("The password does not comply with the format")
                 .build();
 
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
@@ -45,11 +35,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleUserNotFound(UserNotFoundException ex) {
 
         ErrorResponse errorResponse = ErrorResponse.builder()
-                .status(HttpStatus.NOT_FOUND.value())
-                .error("Not data found")
                 .message("User with ID " + ex.getMessage() + " not found")
-                .timestamp(LocalDateTime.now())
-                .details(Collections.emptyList())
                 .build();
 
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
@@ -64,11 +50,7 @@ public class GlobalExceptionHandler {
                 .toList();
 
         ErrorResponse errorResponse = ErrorResponse.builder()
-                .status(HttpStatus.BAD_REQUEST.value())
-                .error("Bad Request")
                 .message("Validation error in submitted fields")
-                .timestamp(LocalDateTime.now())
-                .details(details)
                 .build();
 
         return ResponseEntity.badRequest().body(errorResponse);
@@ -77,11 +59,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorResponse> handleRuntime(RuntimeException ex) {
         ErrorResponse errorResponse = ErrorResponse.builder()
-                .status(HttpStatus.BAD_REQUEST.value())
-                .error("Bad Request")
                 .message(ex.getMessage())
-                .timestamp(LocalDateTime.now())
-                .details(Collections.emptyList())
                 .build();
 
         return ResponseEntity.badRequest().body(errorResponse);
@@ -90,11 +68,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleException(Exception ex) {
         ErrorResponse errorResponse = ErrorResponse.builder()
-                .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
-                .error("Internal Server Error")
                 .message(ex.getMessage())
-                .timestamp(LocalDateTime.now())
-                .details(Collections.emptyList())
                 .build();
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
